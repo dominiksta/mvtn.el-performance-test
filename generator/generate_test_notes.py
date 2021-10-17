@@ -75,7 +75,7 @@ def generate_note_files(
     for i in range(0, amount):
         filename = f'{id_prefix}-{i:06d} Test Note {i}.org' 
         # print(f"-> writing {target_dir}/{filename}")
-        with open(filename, 'w') as file:
+        with open(filename, 'w', newline='\n') as file:
             file.write(note_string(
                 id_prefix, i, link_amount_max, lorem_ipsum_max, template
             ))
