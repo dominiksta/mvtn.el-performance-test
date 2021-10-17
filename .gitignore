@@ -1,4 +1,6 @@
 __pycache__
 
-/test-notes/*
-!/test-notes/.gitkeep
+/emacs-config/elpa
+/emacs-config/mvtn.tar
+
+/test-notes
