@@ -1,0 +1,3 @@
+[submodule "mvtn.el"]
+	path = mvtn.el
+	url = https://github.com/dominiksta/mvtn.el
