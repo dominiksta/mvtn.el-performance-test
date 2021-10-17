@@ -1,2 +1,4 @@
+__pycache__
+
 /test-notes/*
 !/test-notes/.gitkeep
