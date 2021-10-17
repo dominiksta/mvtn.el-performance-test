@@ -47,7 +47,7 @@ def note_string(
 
     link_amount = random.randint(0, link_amount_max)
     links = ''
-    for i in range(number, number + link_amount):
+    for i in range(number + 1, number + link_amount + 1):
         links += f'- ^^{id_prefix}-{i:06d} Test note {i}^^\n'
 
     lorem_ipsum = random.randint(1, lorem_ipsum_max)
