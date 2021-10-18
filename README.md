@@ -8,11 +8,11 @@ large amount of notes.
 # The Results
 
 While I have not bothered measuring the exact performance, I can report that at
-least on my system (nvme ssd + i7-1165G7), the performance is good even with a
-very large amount of notes. (Listing notes takes almost no time at all and the
-backlink buffer updates within ~0.5 seconds even when using `grep` rather than
-`rg`.) Performance only drops when setting `mvtn-search-years` to a higher value
-than the default `3`.
+least on my system (nvme ssd + i7-1165G7), the performance is good even with
+more than 800 notes per year (see `config/heavy_note_taker.py`). Listing notes
+takes almost no time at all and the backlink buffer updates within ~0.5 seconds
+even when using `grep` rather than `rg`. Performance only drops when setting
+`mvtn-search-years` to a higher value than the default `3`.
 
 # Running it Yourself
 
