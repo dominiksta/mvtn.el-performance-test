@@ -1,6 +1,6 @@
-(load-theme 'tango-dark)
-
-(require 'mvtn)
+;; -------------------------------------------------------------------------------
+;; Setup and package installation
+;; -------------------------------------------------------------------------------
 
 (setq
  +repo-dir (expand-file-name
@@ -9,7 +9,25 @@
  package-user-dir (expand-file-name (format "%s/emacs-config/elpa"
                                                  +repo-dir)))
 
+(package-initialize)
+(setq package-archives '(("melpa-stable" . "https://stable.melpa.org/packages/")))
+(unless package-archive-contents (package-refresh-contents))
+
 (package-install-file (expand-file-name (format "%s/emacs-config/mvtn.tar" +repo-dir)))
+
+(dolist (package '(rg ivy which-key))
+  (unless (package-installed-p package)
+    (package-install package)))
+
+(require 'mvtn)
+(require 'rg)
+
+;; -------------------------------------------------------------------------------
+;; Actual Configuration
+;; -------------------------------------------------------------------------------
+
+(ivy-mode 1)
+(which-key-mode 1)
 
 (setq mvtn-note-directories
       (list (list :dir (concat +note-dir "/prv") :name "prv" :structure
@@ -21,5 +39,14 @@
                   '((:dir "flt" :datetree t)
                     (:dir "stc" :datetree nil))))
       mvtn-default-file-extension "org"
-      ;; mvtn-search-function 'mvtn-search-full-text-rg
+      mvtn-search-function 'mvtn-search-full-text-rg
       )
+
+;; -------------------------------------------------------------------------------
+;; Basic UI Tweaks
+;; -------------------------------------------------------------------------------
+
+(load-theme 'misterioso)
+(menu-bar-mode 0)
+(scroll-bar-mode 0)
+(tool-bar-mode 0)
