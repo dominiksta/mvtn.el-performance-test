@@ -6,8 +6,9 @@
  +repo-dir (expand-file-name
             (concat (or load-file-name buffer-file-name) "/../.."))
  +note-dir (expand-file-name (format "%s/test-notes" +repo-dir))
- package-user-dir (expand-file-name (format "%s/emacs-config/elpa"
-                                                 +repo-dir)))
+ user-emacs-directory (expand-file-name
+                       (format "%s/emacs-config/user-emacs-directory" +repo-dir))
+ package-user-dir (expand-file-name (format "%s/emacs-config/elpa" +repo-dir)))
 
 (package-initialize)
 (setq package-archives '(("melpa-stable" . "https://stable.melpa.org/packages/")))

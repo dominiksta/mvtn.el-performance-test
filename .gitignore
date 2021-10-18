@@ -3,4 +3,7 @@ __pycache__
 /emacs-config/elpa
 /emacs-config/mvtn.tar
 
+/emacs-config/user-emacs-directory/*
+!/emacs-config/user-emacs-directory/.gitkeep
+
 /test-notes
